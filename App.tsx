@@ -1,29 +1,25 @@
+// Author: NGUYEN DINH DAT
+// Date: 24/6/2024
+////////// APP ANDROID //////////
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import LoginScreen from './src/Screen/LoginScreen'; // Đường dẫn tới LoginScreen.tsx
 
-const LotsOfStyles = () => {
+const App: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.red}>just red</Text>
-      <Text style={styles.bigBlue}>just bigBlue</Text>
-      <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
-      <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
+      <LoginScreen />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
-  },
-  bigBlue: {
-    color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30,
-  },
-  red: {
-    color: 'red',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
   },
 });
 
-export default LotsOfStyles;
+export default App;
