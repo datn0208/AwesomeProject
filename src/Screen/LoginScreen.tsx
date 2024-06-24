@@ -20,13 +20,13 @@ export default function LoginScreen() {
 
   return (
     <View style={styles.container}>
-      <Image source={require('./image/Logo_IoTVisionc_Final_01.png')} style={styles.logo} />  
-      <Text style={styles.header}></Text>
+      <Image source={require('/home/nguyen/android_project/AwesomeProject/src/image/Logo_IoTVisionc_Final_01.png')} style={styles.logo} />  
+      
       <View style={styles.inputContainer}>
         <Icon name="user" size={20} color="#000" style={styles.icon} />
         <TextInput
           style={styles.input}
-          placeholder="Enter your username"
+          placeholder="Username"
           value={username}
           onChangeText={text => setUsername(text)}
         />
@@ -35,7 +35,7 @@ export default function LoginScreen() {
         <Icon name="lock" size={20} color="#000" style={styles.icon} />
         <TextInput
           style={styles.input}
-          placeholder="Enter your password"
+          placeholder="Password"
           value={password}
           onChangeText={text => setPassword(text)}
           secureTextEntry={true}
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
     borderRadius: 5,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#ccc',
     paddingHorizontal: 10,
     paddingVertical: 5,
@@ -74,13 +74,16 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    height: 40,
+    height: 30,
     paddingVertical: 0,
   },
   logo:{
     width: 300, //điêu chỉnh kích thước logo tùy theo yêu cầu
     height: 70,
-    marginBottom: 2,
+    marginBottom: 8,
+    paddingTop: 10,
+    paddingBottom: 5,
+
   },
 });
 
